@@ -9,7 +9,13 @@ function getStyle(result) {
 }
 
 const LeagueTable = ({ standings }) => {
-
+  // conditional check for standings and standings.table
+  //if standings or standings.table is undefined
+  if (!standings || !standings.table) {
+    return <p>Loading...</p>;
+  }
+  
+  //else
   console.log(standings.table);
 
   return (

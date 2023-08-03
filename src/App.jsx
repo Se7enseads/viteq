@@ -15,21 +15,18 @@ const App = () => {
       })
       .then(data => {
         setStandings(data);
+     
       })
       .catch(error => {
         console.error("Error:", error);
       });
   }, []);
 
-  console.log(standings);
+  // console.log(standings);
 
   return (
     <div>
-      {standings.length > 0 ? (
-        <LeagueTable standings={standings} />
-      ) : (
-        <p>Loading...</p>
-      )}
+       <LeagueTable standings={standings} />
     </div>
   );
 }
